@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK"></head>
+
+<body leftmargin="8" marginwidth="0" topmargin="8" marginheight="4" ffset="0">
+<meta. charset="UTF-8">
+<title>${ENV, var="JOB_NAME"}-第${BUILD_NUMBER}次构建日志</title>
+<table width="100%" cellpadding="0" cellspacing="0" style="font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif">
+<tbody>
+<tr>
+<td>(本邮件是程序自动下发的，请勿回复！)</td></tr>
+<tr>
+<td>
+<h2>
+<font color="#0000FF">测试结果 - ${BUILD_STATUS}</font></h2>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+<b>
+<font color="#0B610B">Robot Test Summary</font></b>
+<hr size="2" width="100%" align="center"></td>
+</tr>
+<table>
+<tr align="center">
+<td>&nbsp;</td>
+<td>Passed/Total</td>
+<td>Pass %</td></tr>
+<tr align="center" style="border-style:solid">
+<td>Critical TestCases</td>
+<td>
+<b>
+<font color="#0B610B">${ROBOT_PASSRATIO}</font></b>
+</td>
+<td>
+<b>
+<font color="#0B610B">${ROBOT_PASSPERCENTAGE}</font></b>
+</td>
+</tr>
+</table>
+<tr>
+<td>
+<br>
+<b>
+<font color="#0B610B">构建信息</font></b>
+<hr size="2" width="100%" align="center"></td>
+</tr>
+<tr>
+<td>
+<ul>
+<li>项目名称&nbsp;：&nbsp;${JOB_NAME}</li>
+<li>构建编号&nbsp;：&nbsp;第${BUILD_NUMBER}次构建</li>
+<li>构建结果&nbsp;：&nbsp;${BUILD_STATUS}</li>
+<li>触发原因&nbsp;：&nbsp;${CAUSE}</li>
+<li>浏览结果&nbsp;：&nbsp;
+<a href="${BUILD_URL}robot">Browse results</a></li>
+<li>测试报告&nbsp;：&nbsp;
+<a href="${BUILD_URL}robot/report/report.html">Open report.html</a></li>
+<li>测试日志&nbsp;：&nbsp;
+<a href="${BUILD_URL}robot/report/log.html">Open log.html</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</meta.>
+</body>
+</html>
